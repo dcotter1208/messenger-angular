@@ -1,11 +1,13 @@
-<div>
-  <button type="button" mat-button (click)="drawer.toggle()">
-    Toggle sidenav
+<div class="nav-component-container">
+  <button class="menu-icon" *ngIf="isMobile" mat-icon-button (click)="drawer.toggle()" aria-label="menu icon">
+    <mat-icon>menu</mat-icon>
   </button>
-  <mat-drawer-container class="example-container" autosize>
-    <mat-drawer [opened]="!isMobile" #drawer class="example-sidenav" mode="side">
-      <p>Messages</p>
+  <mat-drawer-container [hasBackdrop]="isMobile" class="drawer-container" autosize>
+    <mat-drawer [opened]="!isMobile" #drawer class="side-nav" mode="side">
+      <p class="side-nav-text">Messages</p>
     </mat-drawer>
-    <div class="example-sidenav-content"></div>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
   </mat-drawer-container>
 </div>
