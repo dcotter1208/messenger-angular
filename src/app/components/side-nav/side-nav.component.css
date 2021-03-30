@@ -1,0 +1,23 @@
+.nav-component-container {
+  background: rgb(51, 48, 48);
+}
+
+.drawer-container {
+  height: 100vh;
+  background: white;
+}
+
+.side-nav {
+  padding: 20px;
+  width: 300px;
+  background-color: rgb(51, 48, 48);
+  border-right: 1px solid white;
+}
+
+.side-nav-text {
+  color: white;
+}
+
+.menu-icon {
+  color: white;
+}
