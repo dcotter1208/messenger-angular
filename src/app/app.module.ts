@@ -12,6 +12,8 @@ import { MessengerComponent } from './components/messenger/messenger.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { MatCardModule } from '@angular/material/card';
 import { ChatMessageComponent } from './components/chat-message/chat-message.component';
+import { StoreModule } from '@ngrx/store';
+import { messageReducer } from './store/messages.reducer';
 
 @NgModule({
   declarations: [AppComponent, SideNavComponent, MessengerComponent, ChatComponent, ChatMessageComponent],
@@ -23,8 +25,10 @@ import { ChatMessageComponent } from './components/chat-message/chat-message.com
     LayoutModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    StoreModule.forRoot({ messages: messageReducer })
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
