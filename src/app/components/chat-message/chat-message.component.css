@@ -1,0 +1,17 @@
+.message-container {
+  padding: 5px;
+  margin: 5px 0;
+  display: flex;
+}
+.message-content-container {
+  padding: 0 5px;
+}
+.username-title {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.user-photo {
+  border-radius: 25px;
+  height: 25px;
+  width: 25px;
+}

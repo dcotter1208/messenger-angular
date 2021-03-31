@@ -2,11 +2,11 @@
   <button class="menu-icon" *ngIf="isMobile" mat-icon-button (click)="drawer.toggle()" aria-label="menu icon">
     <mat-icon>menu</mat-icon>
   </button>
-  <mat-drawer-container [hasBackdrop]="isMobile" class="drawer-container" autosize>
-    <mat-drawer [opened]="!isMobile" #drawer class="side-nav" mode="side">
+  <mat-drawer-container [hasBackdrop]="isMobile" class="drawer-container">
+    <mat-drawer [opened]="!isMobile" [autoFocus]="false" #drawer class="side-nav" mode="push">
       <p class="side-nav-text">Messages</p>
     </mat-drawer>
-    <mat-drawer-content>
+    <mat-drawer-content class="draw-content">
       <router-outlet></router-outlet>
     </mat-drawer-content>
   </mat-drawer-container>

@@ -7,9 +7,13 @@
   background: white;
 }
 
+.draw-content {
+  margin-right: 0 !important;
+}
+
 .side-nav {
   padding: 20px;
-  width: 300px;
+  width: 200px;
   background-color: rgb(51, 48, 48);
   border-right: 1px solid white;
 }
