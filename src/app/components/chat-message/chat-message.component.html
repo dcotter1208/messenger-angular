@@ -1,0 +1,12 @@
+<div [ngClass]="isCurrentUser ? 'current-user-message-container' : 'message-container'">
+  <img class="user-photo" src="https://www.fillmurray.com/50/50" />
+  <div [ngClass]="isCurrentUser ? 'current-user-content-container' : 'content-container'">
+    <h5 class="username-title">@username</h5>
+    <mat-card [ngClass]="isCurrentUser ? 'current-user-content-card' : 'content-card'">
+      <p class="message-text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia explicabo, obcaecati iure, molestias blanditiis, voluptas enim
+        quidem impedit ipsa numquam rerum aperiam quod. Quis, itaque non ut rem numquam incidunt.
+      </p>
+    </mat-card>
+  </div>
+</div>
