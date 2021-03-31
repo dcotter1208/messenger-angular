@@ -3,7 +3,7 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-drawer-container [hasBackdrop]="isMobile" class="drawer-container">
-    <mat-drawer [opened]="!isMobile" [autoFocus]="false" #drawer class="side-nav" mode="slide">
+    <mat-drawer [opened]="!isMobile" [autoFocus]="false" #drawer class="side-nav" [mode]="isMobile ? 'slide' : 'push'">
       <p class="side-nav-text">Messages</p>
     </mat-drawer>
     <mat-drawer-content class="draw-content">
