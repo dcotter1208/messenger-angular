@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { sendRequest } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-chat-message',
@@ -6,9 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./chat-message.component.css']
 })
 export class ChatMessageComponent implements OnInit {
+  isCurrentUser = false;
+
+  @Input() message;
+  @Input() senderId;
+  @Input() createdAt;
+
   constructor() {}
 
-  @Input() isCurrentUser = false;
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isCurrentUser = this.senderId === 'user1';
+  }
 }

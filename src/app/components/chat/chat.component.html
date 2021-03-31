@@ -1,6 +1,8 @@
 <div class="chat-container">
-  <app-chat-message [isCurrentUser]="true"></app-chat-message>
-  <app-chat-message></app-chat-message>
-  <app-chat-message [isCurrentUser]="true"></app-chat-message>
-  <app-chat-message></app-chat-message>
+  <app-chat-message
+    *ngFor="let message of messages"
+    [message]="message.text"
+    [senderId]="message.senderId"
+    [createdAt]="message.createdAt"
+  ></app-chat-message>
 </div>
