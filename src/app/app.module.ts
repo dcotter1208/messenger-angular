@@ -14,6 +14,8 @@ import { MatCardModule } from '@angular/material/card';
 import { ChatMessageComponent } from './components/chat-message/chat-message.component';
 import { StoreModule } from '@ngrx/store';
 import { messageReducer } from './store/messages.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent, SideNavComponent, MessengerComponent, ChatComponent, ChatMessageComponent],
@@ -26,7 +28,11 @@ import { messageReducer } from './store/messages.reducer';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    StoreModule.forRoot({ messages: messageReducer })
+    StoreModule.forRoot({ messages: messageReducer }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production // Restrict extension to log-only mode
+    })
   ],
 
   providers: [],
