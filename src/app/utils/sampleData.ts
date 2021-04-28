@@ -31,7 +31,7 @@ export const messages: Message[] = [
   },
 
   {
-    text: 'Hey, this is message #5',
+    text: 'Hey, this is message #5 and it is very very long I want to test out a long message',
     conversationId: '12345',
     senderId: 'user1',
     createdAt: '1617213603725'
